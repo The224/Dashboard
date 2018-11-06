@@ -1,4 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import * as particlesJS from 'particles.js';
 import { Subject, timer } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 
@@ -20,6 +21,11 @@ export class SidebarComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
+    console.log(particlesJS);
+
+    particlesJS.load('particles-js', 'assets/particles.json', function () {
+      console.log('callback - particles.js config loaded');
+    });
   }
 
   ngOnDestroy() {

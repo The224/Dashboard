@@ -3,6 +3,28 @@
     left: 0;
     top: 0;
     height: 100%;
-    width: 300px;
+    width: 20%;
     background-color: #e0e0e0;
+    background-image: url('../../assets/asfalt-light.png');
+    background-repeat: repeat-y;
+    animation-duration: 0.1s;
+    animation-name: changewidth;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.clock {
+    height: 20%;
+    font-size: 6vw;
+    font-weight: 100;
+    text-align: center;
+}
+
+@keyframes changewidth {
+    from {
+        transition: background-image 0.2s ease-in-out;
+    }
+    to {
+        transition: background-image 0.2s ease-in-out;
+    }
 }
